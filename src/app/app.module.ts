@@ -9,6 +9,8 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 
 import { ProductsService } from './services/products.service';
+import { WarehouseComponent } from './pages/warehouse/warehouse.component';
+import { EcomerceComponent } from './pages/ecomerce/ecomerce.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductsService } from './services/products.service';
     NavigationComponent,
     ProductsFormComponent,
     ProductsComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    WarehouseComponent,
+    EcomerceComponent
   ],
   imports: [
     BrowserModule,
