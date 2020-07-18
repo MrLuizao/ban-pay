@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-
 import { Product } from '../models/Product';
 
 
@@ -39,7 +38,7 @@ export class ProductsService {
     for (let i = 0; i < this.products.length; i++) {
       if (product == this.products[i]) {
         this.products.splice(i, 1);
-        localStorage.setItem('tasks', JSON.stringify(this.products));
+        localStorage.setItem('products', JSON.stringify(this.products));
       }
     }
   }
