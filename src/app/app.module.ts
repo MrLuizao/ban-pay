@@ -8,6 +8,8 @@ import { ProductsFormComponent } from './components/products-form/products-form.
 import { ProductsComponent } from './components/products/products.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 
+import { ProductsService } from './services/products.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,7 @@ import { ProductsListComponent } from './components/products-list/products-list.
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ ProductsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

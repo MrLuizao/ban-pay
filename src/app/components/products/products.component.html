@@ -1,1 +1,18 @@
-<p>products works!</p>
+
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h3>{{ product.title }}</h3>
+        <div>
+            <button (click)="product.hide = !product.hide" class="btn btn-primary">
+                Detalles
+            </button>
+            &nbsp;&nbsp;
+            <button (click)="deleteProduct(product)" class="btn btn-danger">
+                Borrar
+            </button>
+        </div>
+    </div>
+    <div class="card-body" [hidden]="product.hide">
+        <p>{{product.description}}</p>
+    </div>
+</div>

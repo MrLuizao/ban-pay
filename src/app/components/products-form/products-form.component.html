@@ -1,1 +1,15 @@
-<p>products-form works!</p>
+<div class="card">
+    <div class="card-body">
+      <!-- FORM TO ADD TASKS -->
+      <form (submit)="addProduct(newTitle, newDescription)">
+        <div class="form-group">
+          <input type="text" placeholder="Nombre" #newTitle class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="number" placeholder="Precio" #newDescription class="form-control">
+          <!-- <textarea #newDescription cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea> -->
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Guardar Producto</button>
+      </form>
+    </div>
+  </div>
