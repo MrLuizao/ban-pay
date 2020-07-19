@@ -24,6 +24,8 @@ export class ShopComponent implements OnInit {
   public addCart(product:Product)
   {
     this.productService.changeCart(product);
+    console.log('asi llega el parámetro', product);
+    
   }
 
 

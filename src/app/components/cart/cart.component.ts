@@ -9,8 +9,6 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class CartComponent implements OnInit {
 
-  // public items: Array<IItem>
-  // cartProducts: Product[];
   public items: Array<Product>
 
   public totalPrice:number = 0;
@@ -30,9 +28,9 @@ export class CartComponent implements OnInit {
     })
   }
 
-  public remove(producto:Product)
+  public remove(product:Product)
   {
-    this.productService.removeElementCart(producto);
+    this.productService.removeElementCart(product);
   }
 
 }

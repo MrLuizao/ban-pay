@@ -12,7 +12,6 @@ export class ProductsService {
   private cart = new BehaviorSubject<Array<Product>>(null);
   public currentDataCart$ = this.cart.asObservable();
 
-
   constructor() { }
 
   getProduct() {
@@ -48,9 +47,9 @@ export class ProductsService {
   }
 
   public changeCart(newData: Product) {
-    //Obtenemos el valor actual
     let listCart = this.cart.getValue();
-    //Si no es el primer item del carrito
+    console.log('list cart desde el servicio', listCart);
+    
     if(listCart)
     {
       //Buscamos si ya cargamos ese item en el carrito
@@ -58,7 +57,7 @@ export class ProductsService {
       //Si ya cargamos uno aumentamos su cantidad
       if(objIndex != -1)
       {
-        listCart[objIndex].quanty += 1;
+        listCart[objIndex].price += 1;
       }
       //Si es el primer item de ese tipo lo agregamos derecho al carrito
       else {

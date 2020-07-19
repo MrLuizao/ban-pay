@@ -1,13 +1,11 @@
 <div class="card">
     <div class="card-body">
-      <!-- FORM TO ADD TASKS -->
       <form (submit)="addProduct(newName, newPrice, newQuanty)">
         <div class="form-group">
           <input type="text" placeholder="Nombre" #newName class="form-control">
         </div>
         <div class="form-group">
             <input type="number" placeholder="Precio" #newPrice class="form-control">
-          <!-- <textarea #newDescription cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea> -->
         </div>
         <div class="form-group">
           <input type="number" placeholder="Cantidad" #newQuanty class="form-control">
