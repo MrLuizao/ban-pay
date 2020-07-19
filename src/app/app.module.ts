@@ -11,6 +11,8 @@ import { ProductsListComponent } from './components/products-list/products-list.
 import { ProductsService } from './services/products.service';
 import { WarehouseComponent } from './pages/warehouse/warehouse.component';
 import { EcomerceComponent } from './pages/ecomerce/ecomerce.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { EcomerceComponent } from './pages/ecomerce/ecomerce.component';
     ProductsComponent,
     ProductsListComponent,
     WarehouseComponent,
-    EcomerceComponent
+    EcomerceComponent,
+    ShopComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
