@@ -21,7 +21,7 @@ export class ProductsFormComponent implements OnInit {
     this.productService.addProduct({
       name: newName.value,
       price: newPrice.value,
-      quanty: newQuanty.value,
+      quanty: newQuanty.valueAsNumber,
       hide: true
     });
     newName.value = '';

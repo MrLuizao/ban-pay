@@ -55,14 +55,14 @@ export class ProductsService {
       //Buscamos si ya cargamos ese item en el carrito
       let objIndex = listCart.findIndex((obj => obj.name == newData.name));
       //Si ya cargamos uno aumentamos su cantidad
-      if(objIndex != -1)
-      {
-        listCart[objIndex].price += 1;
-      }
+      // if(objIndex != -1)
+      // {
+      //   listCart[objIndex].price += 1;
+      // }
       //Si es el primer item de ese tipo lo agregamos derecho al carrito
-      else {
+      // else {
         listCart.push(newData);
-      }  
+      // }  
     }
     //Si es el primer elemento lo inicializamos
     else {

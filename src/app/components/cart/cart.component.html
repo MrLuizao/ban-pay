@@ -6,10 +6,8 @@
   </div>
   <div class="card-body">
     <div *ngFor="let item of items" class="col-md-12">
-        <!-- <div class="col-md-9"> -->
           <p>{{item.name}}</p>
           <p>${{item.price}}</p>
-        <!-- </div> -->
         <button type="button" class="btn btn-danger" (click)="remove(item)" style="margin-bottom: 3rem;">
           Remove
         </button>      
