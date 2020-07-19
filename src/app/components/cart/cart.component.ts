@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/Product';
 import { ProductsService } from 'src/app/services/products.service';
+import { Item } from 'src/app/models/Item';
 
 @Component({
   selector: 'app-cart',
@@ -9,7 +10,7 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class CartComponent implements OnInit {
 
-  public items: Array<Product>
+  public items: Array<Item>
 
   public totalPrice:number = 0;
   public totalQuantity:number = 0;
@@ -23,12 +24,12 @@ export class CartComponent implements OnInit {
       {
         this.items = x;
         this.totalQuantity = x.length;
-        this.totalPrice = x.reduce((sum, current) => sum + (current.price * current.quanty), 0);
+        this.totalPrice = x.reduce((sum, current) => sum + (current.price * current.quantity), 0);
       }
     })
   }
 
-  public remove(product:Product)
+  public remove(product:Item)
   {
     this.productService.removeElementCart(product);
   }
