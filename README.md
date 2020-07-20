@@ -1,3 +1,9 @@
+# INTALACIÓN DE COMPONENTES DE NODE
+Ejecutar el siguiente comando en el CLI:
+
+npm install
+
+
 # BanPay
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
