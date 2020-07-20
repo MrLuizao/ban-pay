@@ -11,21 +11,18 @@ import { Product } from 'src/app/models/Product';
 export class ShopComponent implements OnInit {
 
   listProduct: Product[];
+  
+  listProducts: Item [];
+  
 
   constructor( public productService: ProductsService ) { }
 
-  ngOnInit(): void {
-
+  ngOnInit(){
     this.listProduct = this.productService.getProduct();
-    console.log('arreglo productos', this.listProduct); 
   }
 
-
-  public addCart(product:Item)
-  {
+  addCart(product:Item){
     this.productService.changeCart(product);
-    console.log('asi llega el parámetro', product);
-    
   }
 
 

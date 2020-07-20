@@ -18,9 +18,4 @@ export class ProductsListComponent implements OnInit {
     this.products = this.productService.getProduct();
   }
 
-  // addProduct(product: Product) {
-  //   console.log(product);
-  //   this.productService.addProduct(product);
-  // }
-
 }

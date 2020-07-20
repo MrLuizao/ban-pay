@@ -19,19 +19,20 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
 
-    this.productService.currentDataCart$.subscribe(x=>{
-      if(x)
-      {
-        this.items = x;
-        this.totalQuantity = x.length;
-        this.totalPrice = x.reduce((sum, current) => sum + (current.price * current.quantity), 0);
+    this.productService.currentDataCart$.subscribe( item =>{
+
+      if(item){
+        this.items = item;
+        this.totalQuantity = item.length;
+        this.totalPrice = item.reduce((sum, current) => sum + (current.price * current.quantity), 0);
       }
-    })
+
+    });
   }
 
-  public remove(product:Item)
-  {
+  remove(product:Item){
     this.productService.removeElementCart(product);
+    
   }
 
 }

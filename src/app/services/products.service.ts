@@ -4,10 +4,10 @@ import { BehaviorSubject } from 'rxjs';
 import { Item } from 'src/app/models/Item';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductsService {
 
   products: Product[];
@@ -48,30 +48,17 @@ export class ProductsService {
     }
   }
 
-  public changeCart(newData: Item) {
+  changeCart(newData: Item) {
 
     let listCart = this.cart.getValue();
     console.log('list cart desde el servicio', listCart);
     
     if(listCart)
     {
+      listCart.findIndex((obj => obj == newData));
+      listCart.push(newData);
 
-      //Buscamos si ya cargamos ese item en el carrito
-      let objIndex = listCart.findIndex((obj => obj.name == newData.name));
-      //Si ya cargamos uno aumentamos su cantidad
-      // if(objIndex != -1)
-      // {
-      //   listCart[objIndex].price += 1;
-      // }
-      //Si es el primer item de ese tipo lo agregamos derecho al carrito
-      // else {
-
-
-        listCart.push(newData);
-      // }  
-    }
-    //Si es el primer elemento lo inicializamos
-    else {
+    }else {
       listCart = [];
       listCart.push(newData);
     }
@@ -79,11 +66,10 @@ export class ProductsService {
     this.cart.next(listCart);
   }
 
-  
-  public removeElementCart(newData:Item){
+  removeElementCart(newData:Item){
 
     let listCart = this.cart.getValue();
-    let objIndex = listCart.findIndex((obj => obj.name == newData.name));
+    let objIndex = listCart.findIndex((obj => obj == newData));
 
     if(objIndex != -1)
     {
@@ -92,7 +78,6 @@ export class ProductsService {
     }
 
     this.cart.next(listCart);
-
   }
   
 }
